@@ -11,11 +11,13 @@ public class US3_AddressesPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "(//h4)[2]")
+    @FindBy(xpath = "//h4")
     public WebElement addressesSayfasi;
 
     @FindBy(xpath = "(//*[text()='Add'])[1]")
     public WebElement addButton;
 
+    @FindBy(xpath = "//*[text()='Edit Your Billing Address']")
+    public WebElement editYourBillingAddressButton;
 
 }

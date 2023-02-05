@@ -11,7 +11,7 @@ public class US3_PearlyMarketHomePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "(//*[text()='Sign In'])[2]")
+    @FindBy(xpath = "//*[text()='Sign In']")
     public WebElement signIn;
 
     @FindBy(xpath = "//*[@id='username']")
@@ -20,6 +20,13 @@ public class US3_PearlyMarketHomePage {
     @FindBy(xpath = "//*[@id='password']")
     public WebElement password;
 
-    @FindBy(xpath = "(//*[text()='Sign In'])[3]")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement signInButton;
+
+    @FindBy(xpath = "//*[text()='Sign Out']")
+    public WebElement signOut;
+
+    @FindBy(xpath = "(//*[@lang='en-US'])[1]")
+    public WebElement anaSayfaDogrulama;
+
 }

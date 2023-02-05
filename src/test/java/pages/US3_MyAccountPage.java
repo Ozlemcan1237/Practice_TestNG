@@ -11,9 +11,6 @@ public class US3_MyAccountPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//*[text()='Sign Out']")
-    public WebElement signOut;
-
     @FindBy(xpath = "(//*[text()='My Account'])[2]")
     public WebElement myAccountBasligi;
 

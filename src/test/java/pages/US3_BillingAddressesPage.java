@@ -21,6 +21,12 @@ public class US3_BillingAddressesPage {
     @FindBy(xpath = "//*[@id='billing_company']")
     public WebElement companyName;
 
+    @FindBy(id = "select2-billing_country-container")
+    public WebElement countryRegion;
+
+    @FindBy(xpath = "//*[@title='Venezuela']")
+    public WebElement venezuela;
+
     @FindBy(xpath = "//*[@id='billing_address_1']")
     public WebElement streetAddress;
 
