@@ -23,4 +23,6 @@ public class US3_AddressesPage {
     @FindBy(xpath = "//*[text()='Edit Your Billing Address']")
     public WebElement editYourBillingAddressButton;
 
+    @FindBy(xpath = "//*[text()='Edit Your Shipping Address']")
+    public WebElement editYourShippingAddressButton;
 }

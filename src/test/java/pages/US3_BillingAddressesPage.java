@@ -48,4 +48,7 @@ public class US3_BillingAddressesPage {
     @FindBy(xpath = "//*[text()='Save address']")
     public WebElement saveAddress;
 
+    @FindBy(xpath = "//*[@role='alert']")
+    public WebElement onayYazisiBilling;
+
 }

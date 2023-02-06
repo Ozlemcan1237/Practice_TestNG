@@ -15,7 +15,6 @@ public class US3_BillingAddressTest {
     US3_MyAccountPage us3_myAccountPage;
     US3_AddressesPage us3_addressesPage;
     US3_BillingAddressesPage us3_billingAddressesPage;
-    US3_ShippingAddressesPage us3_shippingAddressesPage;
 
     @Test
     public void billingAddressTest01() {
@@ -23,8 +22,6 @@ public class US3_BillingAddressTest {
         us3_myAccountPage = new US3_MyAccountPage();
         us3_addressesPage = new US3_AddressesPage();
         us3_billingAddressesPage = new US3_BillingAddressesPage();
-        us3_shippingAddressesPage = new US3_ShippingAddressesPage();
-
 
         Driver.getDriver().get(ConfigReader.getProperty("pearly_url"));
         ReusableMethods.waitFor(3);
@@ -60,12 +57,12 @@ public class US3_BillingAddressTest {
 
         ReusableMethods.waitFor(3);
         us3_billingAddressesPage.countryRegion.click();
-        actions.sendKeys(Keys.ARROW_DOWN,Keys.ARROW_DOWN,Keys.ARROW_DOWN,Keys.ARROW_DOWN,
-                Keys.ARROW_DOWN,Keys.ARROW_DOWN,Keys.ENTER).perform();
+        actions.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN,
+                Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER).perform();
 
         ReusableMethods.waitFor(3);
         us3_billingAddressesPage.streetAddress.clear();
-        us3_billingAddressesPage.streetAddress.sendKeys("Corfu 456",Keys.TAB, Keys.TAB);
+        us3_billingAddressesPage.streetAddress.sendKeys("Corfu 456", Keys.TAB, Keys.TAB);
         ReusableMethods.waitFor(3);
 
         us3_billingAddressesPage.townCity.clear();
@@ -73,25 +70,24 @@ public class US3_BillingAddressTest {
         ReusableMethods.waitFor(3);
 
         us3_billingAddressesPage.state.click();
-        actions.sendKeys(Keys.ARROW_DOWN,Keys.ARROW_DOWN,Keys.ENTER).perform();
+        actions.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER).perform();
 
         us3_billingAddressesPage.zipCode.clear();
-        us3_billingAddressesPage.zipCode.sendKeys("10001",Keys.TAB);
+        us3_billingAddressesPage.zipCode.sendKeys("10001", Keys.TAB);
 
         us3_billingAddressesPage.phone.clear();
         us3_billingAddressesPage.phone.sendKeys("123456");
-        ReusableMethods.waitFor(3);
+        ReusableMethods.waitFor(4);
 
         String actualEmail = "pearlymarketplace@gmail.com";
         String expectedEmail = us3_billingAddressesPage.emailAddress.getText();
-        Assert.assertNotEquals(expectedEmail,actualEmail);
-        ReusableMethods.waitFor(3);
+        ReusableMethods.waitFor(4);
+        Assert.assertNotEquals(expectedEmail, actualEmail);
 
         us3_billingAddressesPage.saveAddress.click();
         ReusableMethods.waitFor(3);
 
-        Assert.assertTrue(us3_shippingAddressesPage.onayYazisiShipping.isDisplayed());
-
+        Assert.assertTrue(us3_billingAddressesPage.onayYazisiBilling.isDisplayed());
         Driver.closeDriver();
     }
 }

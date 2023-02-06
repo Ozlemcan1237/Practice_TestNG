@@ -9,7 +9,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US3_ShippingAddressTest {
+public class US4_ShippingAddressTest {
 
     US3_PearlyMarketHomePage us3_pearlyMarketHomePage;
     US3_MyAccountPage us3_myAccountPage;
