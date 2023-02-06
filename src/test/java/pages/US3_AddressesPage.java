@@ -17,6 +17,9 @@ public class US3_AddressesPage {
     @FindBy(xpath = "(//*[text()='Add'])[1]")
     public WebElement addButton;
 
+    @FindBy(xpath = "(//*[text()='Add'])[2]")
+    public WebElement addButton2;
+
     @FindBy(xpath = "//*[text()='Edit Your Billing Address']")
     public WebElement editYourBillingAddressButton;
 
