@@ -240,6 +240,12 @@ public class ReusableMethods {
             }
         }
 
+    public static void clickByJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+        js.executeScript("arguments[0].click();", element);
     }
+
+
+}
 
 

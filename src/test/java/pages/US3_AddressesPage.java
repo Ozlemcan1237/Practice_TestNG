@@ -11,7 +11,7 @@ public class US3_AddressesPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//h4")
+    @FindBy(xpath = "//*[@class='icon-box-content']")
     public WebElement addressesSayfasi;
 
     @FindBy(xpath = "(//*[text()='Add'])[1]")

@@ -24,9 +24,6 @@ public class US3_BillingAddressesPage {
     @FindBy(id = "select2-billing_country-container")
     public WebElement countryRegion;
 
-    @FindBy(xpath = "//*[@title='Venezuela']")
-    public WebElement venezuela;
-
     @FindBy(xpath = "//*[@id='billing_address_1']")
     public WebElement streetAddress;
 
@@ -50,5 +47,8 @@ public class US3_BillingAddressesPage {
 
     @FindBy(xpath = "//*[@role='alert']")
     public WebElement onayYazisiBilling;
+
+    @FindBy(xpath = "//*[@class=' alert alert-simple alert-icon alert-close-top alert-danger']")
+    public WebElement firstNameHataYazisi;
 
 }

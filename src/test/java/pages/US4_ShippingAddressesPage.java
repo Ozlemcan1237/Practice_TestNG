@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US3_ShippingAddressesPage {
+public class US4_ShippingAddressesPage {
 
-    public US3_ShippingAddressesPage(){
+    public US4_ShippingAddressesPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -40,4 +40,7 @@ public class US3_ShippingAddressesPage {
 
     @FindBy(xpath = "//*[@role='alert']")
     public WebElement onayYazisiShipping;
+
+    @FindBy(xpath = "//*[@class='woocommerce-notices-wrapper']")
+    public WebElement hataYazilari;
 }
