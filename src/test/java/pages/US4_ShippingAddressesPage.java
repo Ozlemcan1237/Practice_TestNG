@@ -43,4 +43,7 @@ public class US4_ShippingAddressesPage {
 
     @FindBy(xpath = "//*[@class='woocommerce-notices-wrapper']")
     public WebElement hataYazilari;
+
+    @FindBy(xpath = "//*[text()='Department']")
+    public WebElement state2;
 }
