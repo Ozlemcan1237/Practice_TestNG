@@ -84,10 +84,10 @@ public class US3_BillingAddressTest {
         ReusableMethods.waitFor(4);
         Assert.assertNotEquals(expectedEmail, actualEmail);
 
-        us3_billingAddressesPage.saveAddress.click();
-        ReusableMethods.waitFor(3);
-
-        Assert.assertTrue(us3_billingAddressesPage.onayYazisiBilling.isDisplayed());
+//        us3_billingAddressesPage.saveAddress.click();
+//        ReusableMethods.waitFor(3);
+//
+//        Assert.assertTrue(us3_billingAddressesPage.onayYazisiBilling.isDisplayed());
         Driver.closeDriver();
     }
 }

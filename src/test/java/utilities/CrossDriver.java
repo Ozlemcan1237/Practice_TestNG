@@ -43,6 +43,8 @@ public class CrossDriver {
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
             }
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         }
         return driver;
     }
