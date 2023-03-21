@@ -27,8 +27,12 @@ public class Driver {
         if (driver == null) { //EGER DRIVER'A DEGER ATANMAMISSA DEGER ATA, EGER DEGER ATANMISSSA DRIVER'I AYNI SAYFADA RETURN ET
             switch (ConfigReader.getProperty("browser")){
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+//                    WebDriverManager.chromedriver().setup();
+//                    driver = new ChromeDriver();
+                    ChromeOptions co = new ChromeOptions();
+                    co.addArguments("--remote-allow-origins=*");
+                    driver = new ChromeDriver(co);
+
                     break;
                 case "edge":
                     WebDriverManager.edgedriver().setup();
